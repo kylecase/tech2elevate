@@ -18,9 +18,7 @@ By the end of this session, your page will:
 - How to write basic CSS rules with:
   - Selectors (`.product-card`, `.product-image`, etc.)
   - Properties like `color`, `padding`, `border-radius`, `font-size`
-
 - How to use `display: flex` to make a responsive product grid
-- How to keep CSS organized by grouping related styles
 - How to use semantic HTML to create sections of a page
 - How to apply class names and IDs to prepare for styling and future JavaScript
 
@@ -31,6 +29,15 @@ By the end of this session, your page will:
 Each student will have a styled product grid and a cart section that looks something like:
 
 ```html
+<div>
+  <h2 class="section-title">Your Cart</h2>
+  <div class="cart-container">
+    <p class="empty-cart" id="empty-cart-message">Your cart is empty.</p>
+    <ul class="cart-items" id="cart-items"></ul>
+    <div class="cart-total" id="cart-total"></div>
+  </div>
+</div>
+
 <div class="product-grid">
   <div class="product-card">
     <img src="..." class="product-image" />
@@ -40,15 +47,6 @@ Each student will have a styled product grid and a cart section that looks somet
   </div>
   <!-- Add another product if time allows -->
 </div>
-
-<section>
-  <h2 class="section-title">Your Cart</h2>
-  <div class="cart-container">
-    <p class="empty-cart" id="empty-cart-message">Your cart is empty.</p>
-    <ul class="cart-items" id="cart-items"></ul>
-    <div class="cart-total" id="cart-total"></div>
-  </div>
-</section>
 ```
 
 With styles like:
@@ -96,7 +94,7 @@ With styles like:
 
 ### Setup
 
-- Students should reuse their project folder from Week 1
+- Students should reuse their project from Week 2
 - Ensure `index.html` includes the link to the `styles.css` file:
 
 ```html
@@ -122,8 +120,9 @@ With styles like:
   - Button colors and hover states
 
 - If students finish early:
-  - Add multiple product cards
   - Adjust spacing and layout
+  - Experiment with different styles
+  - Explore CSS animations
 
 ### Wrap-up and What’s Next
 

@@ -1,42 +1,79 @@
-# Week 3 Cheatsheet: Cart Section (HTML Structure)
+# Week 3 Cheatsheet: Styling & Cart Section
 
 ## What You’re Building
 
-A visible shopping cart area with a placeholder message
+- A **product grid** with styled product cards
+- A **cart section** with a title, placeholder, list, and total area
+
+---
+
+## CSS Concepts You’ll Use
+
+- **Selectors:** `.class`, `element`, `#id`
+- **Properties:** `padding`, `margin`, `border-radius`, `font-size`, `background-color`
+- **Layout:** `display: flex`, `flex-wrap`, `gap`, `justify-content`
+
+---
 
 ## HTML Tags You’ll Use
 
 ```html
 <section>
-  <!-- A logical section of the page -->
-  <h2>
-    <!-- Cart title -->
-    <div>
-      <!-- Cart container -->
-      <p><!-- "Your cart is empty" --></p>
-      <ul>
-        <!-- List of cart items -->
-      </ul>
-    </div>
-  </h2>
-</section>
-```
-
-## Example Code
-
-```html
-<section>
-  <h2 class="section-title">Your Cart</h2>
-  <div class="cart-container">
-    <p class="empty-cart" id="empty-cart-message">Your cart is empty.</p>
-    <ul class="cart-items" id="cart-items"></ul>
-    <div class="cart-total" id="cart-total"></div>
+  <h2><!-- Section title --></h2>
+  <div>
+    <p><!-- Empty cart message --></p>
+    <ul>
+      <!-- List of cart items -->
+    </ul>
+    <div><!-- Cart total --></div>
   </div>
 </section>
+
+<div class="product-grid">
+  <div class="product-card">
+    <img />
+    <h3><!-- Product name --></h3>
+    <p><!-- Product price --></p>
+    <button><!-- Add to Cart --></button>
+  </div>
+</div>
 ```
+
+---
+
+## Example CSS Snippets
+
+```css
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  width: 250px;
+  text-align: center;
+}
+
+.cart-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 600px;
+}
+```
+
+---
 
 ## Tips to Remember
 
-- Use unique `id`s for JavaScript hooks later
-- Use classes for styling
-- Place this section after your product grid
+- Always link your CSS in `<head>`:
+  `<link rel="stylesheet" href="styles.css" />`
+- Use **classes for styling**, **IDs for JS hooks later**
+- `display: flex` + `gap` = easy responsive layouts
+- Duplicate product cards instead of rewriting from scratch
+- Start simple → adjust colors, spacing, borders if you have time
